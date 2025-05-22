@@ -1,0 +1,26 @@
+[
+  {
+    "id": 4,
+    "nombre": "Agustin",
+    "email": "agustin@agustin.com",
+    "edad": 29
+  },
+  {
+    "id": 5,
+    "nombre": "Jose lopez",
+    "email": "jose@gmail.com",
+    "edad": 44
+  },
+  {
+    "id": 6,
+    "nombre": "perex",
+    "email": "l.huck@itecriocuarto.org.ar",
+    "edad": 23
+  },
+  {
+    "id": 7,
+    "nombre": "Gonzalo Toledo",
+    "email": "gonzalo@gonzalo.com",
+    "edad": 27
+  }
+]

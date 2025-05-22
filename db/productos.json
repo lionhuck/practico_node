@@ -1,0 +1,12 @@
+[
+  {
+    "id": 2,
+    "nombre": "Celular",
+    "precio": "21312312"
+  },
+  {
+    "id": 3,
+    "nombre": "Cargador",
+    "precio": "3450"
+  }
+]
