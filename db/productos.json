@@ -2,11 +2,11 @@
   {
     "id": 2,
     "nombre": "Celular",
-    "precio": 2345
+    "precio": 22
   },
   {
     "id": 3,
     "nombre": "Cargador",
-    "precio": "3450"
+    "precio": 1234
   }
 ]

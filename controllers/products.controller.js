@@ -165,19 +165,6 @@ const actualizarProducto = async (req, res) => {
             });
         }
 
-        // Verificar nombre único (excluyendo el producto actual)
-        const nombreExiste = productos.some(p => 
-            p.nombre.toLowerCase() === nombre.toLowerCase().trim() && 
-            p.id !== parseInt(req.params.id)
-        );
-        
-        if (nombreExiste) {
-            return res.status(400).json({ 
-                status: 400,
-                message: 'Ya existe otro producto con ese nombre' 
-            });
-        }
-
         // Actualizar producto
         productos[productoIndex] = {
             ...productos[productoIndex],
