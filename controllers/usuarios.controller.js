@@ -10,7 +10,6 @@ async function leerUsuarios() {
         return JSON.parse(data);
     } catch (error) {
         console.error('Error al leer usuarios:', error);
-        // Si el archivo no existe, retornar array vacío
         if (error.code === 'ENOENT') {
             return [];
         }
@@ -18,7 +17,6 @@ async function leerUsuarios() {
     }
 }
 
-// Función auxiliar para escribir en el archivo JSON de forma asíncrona
 async function guardarUsuarios(data) {
     try {
         await fs.writeFile(dbPath, JSON.stringify(data, null, 2), 'utf-8');
@@ -28,8 +26,6 @@ async function guardarUsuarios(data) {
         throw error;
     }
 }
-
-// Función para generar próximo ID de forma segura
 function generarProximoId(usuarios) {
     if (usuarios.length === 0) return 1;
     const maxId = Math.max(...usuarios.map(u => u.id));

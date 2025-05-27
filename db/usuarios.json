@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "id": 1,
     "nombre": "León Federico Huck",
     "email": "leonhuck007@gmail.com",
@@ -16,5 +17,35 @@
     "nombre": "jose",
     "email": "frmfe@sdvds",
     "edad": 33
+=======
+    "id": 4,
+    "nombre": "Agustin",
+    "email": "agustin@agustin.com",
+    "edad": 4
+  },
+  {
+    "id": 5,
+    "nombre": "Jose lopez",
+    "email": "jose@gmail.com",
+    "edad": 54
+  },
+  {
+    "id": 6,
+    "nombre": "perex",
+    "email": "l.huck@itecriocuarto.org.ar",
+    "edad": 12345
+  },
+  {
+    "id": 7,
+    "nombre": "Gonzalo Toledo",
+    "email": "gonzalo@gonzalo.com",
+    "edad": 123
+  },
+  {
+    "id": 8,
+    "nombre": "leon",
+    "email": "lwo@lda",
+    "edad": 23
+>>>>>>> 70fcaa900196b99bf050af43cdd5b484f8c7d39d
   }
 ]

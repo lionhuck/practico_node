@@ -1,7 +1,18 @@
 [
   {
+<<<<<<< HEAD
     "id": 1,
     "nombre": "Computador",
     "precio": 1500
+=======
+    "id": 2,
+    "nombre": "Celular",
+    "precio": 22
+  },
+  {
+    "id": 3,
+    "nombre": "Cargador",
+    "precio": 1234
+>>>>>>> 70fcaa900196b99bf050af43cdd5b484f8c7d39d
   }
 ]

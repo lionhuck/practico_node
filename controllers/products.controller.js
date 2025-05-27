@@ -392,6 +392,7 @@ const actualizarProducto = async (req, res) => {
         }
 
         if (typeof precio !== 'number' || precio < 0) {
+<<<<<<< HEAD
             return res.status(400).json({
                 status: 400,
                 message: 'El precio debe ser un número válido mayor o igual a 0'
@@ -421,6 +422,27 @@ const actualizarProducto = async (req, res) => {
             data: producto,
             status: 200,
             message: 'Producto actualizado exitosamente'
+=======
+            return res.status(400).json({ 
+                status: 400, 
+                message: 'El precio debe ser un número válido mayor o igual a 0' 
+            });
+        }
+
+        // Actualizar producto
+        productos[productoIndex] = {
+            ...productos[productoIndex],
+            nombre: nombre.trim(),
+            precio: parseFloat(precio)
+        };
+
+        await guardarProductos(productos);
+
+        res.json({ 
+            data: productos[productoIndex], 
+            status: 200, 
+            message: 'Producto actualizado exitosamente' 
+>>>>>>> 70fcaa900196b99bf050af43cdd5b484f8c7d39d
         });
     } catch (error) {
         console.error('Error en actualizarProducto:', error);
