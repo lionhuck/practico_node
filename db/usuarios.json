@@ -1,26 +1,20 @@
 [
   {
-    "id": 4,
-    "nombre": "Agustin",
-    "email": "agustin@agustin.com",
-    "edad": 29
+    "id": 1,
+    "nombre": "León Federico Huck",
+    "email": "leonhuck007@gmail.com",
+    "edad": 20
   },
   {
-    "id": 5,
-    "nombre": "Jose lopez",
-    "email": "jose@gmail.com",
-    "edad": 44
+    "id": 2,
+    "nombre": "Agustin Invaldi",
+    "email": "a.invaldi@itecriocuarto.org.ar",
+    "edad": 25
   },
   {
-    "id": 6,
-    "nombre": "perex",
-    "email": "l.huck@itecriocuarto.org.ar",
-    "edad": 23
-  },
-  {
-    "id": 7,
-    "nombre": "Gonzalo Toledo",
-    "email": "gonzalo@gonzalo.com",
-    "edad": 27
+    "id": 3,
+    "nombre": "jose",
+    "email": "frmfe@sdvds",
+    "edad": 33
   }
 ]
