@@ -1,15 +1,19 @@
 const mysql = require('mysql2/promise')
 
-const crearDataBase = async () =>
+const createDataBase = async () =>
 {
-    const conection = await mysql.createConection({
-        host:'host'
-        user:'root'
-        password:ENV.password
-    })
-    await connection.query('CREATE DATABASE IF NOT EXISTS crud_app')
-    console.log('La base de datos se creo o ya existia')
-    await connection.end()
-
+    try{
+        const connection = await mysql.createConnection({
+            host:'localhost',
+            user:'root',
+            password:'L4i0n_f4k3007'
+        })
+        await connection.query('CREATE DATABASE IF NOT EXISTS crud_db')
+        console.log('La base de datos se creo o ya existia')
+        await connection.end()
+    } catch (error) {
+        console.error('Error al crear la base de datos:', error.message);
+    }
 } 
 
+createDataBase();
