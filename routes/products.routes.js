@@ -7,11 +7,13 @@ const {
     actualizarProducto,
     eliminarProducto
 } = require('../controllers/products.controller');
+const verifyToken = require('../middlewares/verifyToken');
 
-router.get('/', getProductos);
-router.get('/:id', getProducto);
-router.post('/', createProducto);
-router.put('/:id', actualizarProducto);
-router.delete('/:id', eliminarProducto);
+
+router.get('/',verifyToken, getProductos);
+router.get('/:id',verifyToken, getProducto);
+router.post('/',verifyToken, createProducto);
+router.put('/:id',verifyToken, actualizarProducto);
+router.delete('/:id',verifyToken, eliminarProducto);
 
 module.exports = router;  

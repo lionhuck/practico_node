@@ -17,6 +17,9 @@ app.use('/productos', productosRouter);
 const ventasRouter = require('./routes/ventas.routes');
 app.use('/ventas', ventasRouter);
 
+const authRouter = require('./routes/auth.routes');
+app.use('/auth', authRouter);
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
