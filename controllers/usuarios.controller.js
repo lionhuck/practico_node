@@ -25,13 +25,13 @@ const getUsuarioById = async (req, res) => {
 
 // Crear nuevo usuario
 const createUsuario = async (req, res) => {
-    const { nombre, email, edad } = req.body;
+    const { nombre, email, edad, rol } = req.body;
     try {
-        if (!nombre || !email || !edad) {
+        if (!nombre || !email || !edad || !rol) {
             return res.status(400).json({ status: 400, message: 'Faltan campos obligatorios' });
         }
 
-        const nuevoUsuario = await Usuario.create({ nombre, email, edad });
+        const nuevoUsuario = await Usuario.create({ nombre, email, edad, rol: 'cliente', isAdmin: false });
         res.status(201).json({ status: 201, data: nuevoUsuario, message: 'Usuario creado exitosamente' });
     } catch (error) {
         res.status(500).json({ status: 500, message: 'Error al crear usuario', error: error.message });
@@ -46,10 +46,12 @@ const updateUsuario = async (req, res) => {
             return res.status(404).json({ status: 404, message: 'Usuario no encontrado' });
         }
 
-        const { nombre, email, edad } = req.body;
+        const { nombre, email, edad, rol, isAdmin } = req.body;
         usuario.nombre = nombre || usuario.nombre;
         usuario.email = email || usuario.email;
         usuario.edad = edad || usuario.edad;
+        usuario.rol = rol || usuario.rol; // Asignar el rol del usuario actual
+        usuario.isAdmin = isAdmin !== undefined ? isAdmin : usuario.isAdmin; // Mantener el valor actual si no se proporciona
 
         await usuario.save();
 

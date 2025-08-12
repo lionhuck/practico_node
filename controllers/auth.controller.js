@@ -16,11 +16,14 @@ const register = async (req, res) => {
             nombre,
             email,
             age,
+            rol: 'cliente',
+            isAdmin: false,
             password: hashedPassword
         });
 
         return res.status(201).json({ status: 201, message: 'Usuario registrado exitosamente', usuario: newUsuario });
     } catch (error) {
+        console.error("Error en el registro:", error);
         return res.status(500).json({ status: 500, message: 'Error al registrar usuario', error: error.message });
     }
 };

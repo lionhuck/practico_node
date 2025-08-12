@@ -17,13 +17,17 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Usuario.init({
-    nombre: DataTypes.STRING,
-    email: DataTypes.STRING,
-    age: DataTypes.INTEGER,
-    password: DataTypes.STRING
+  nombre: DataTypes.STRING,
+  email: DataTypes.STRING,
+  age: DataTypes.INTEGER,
+  rol: DataTypes.STRING,
+  isAdmin: DataTypes.BOOLEAN,
+  password: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Usuario',
+    tableName: 'usuarios',
+    freezeTableName: true        
   });
   return Usuario;
 };
