@@ -9,12 +9,12 @@ const {
 } = require('../controllers/products.controller');
 const verifyToken = require('../middlewares/verifyToken');
 const isAdmin = require('../middlewares/isAdmin');
-
+const isModerador = require('../middlewares/isModerador');
 
 router.get('/',verifyToken, getProductos);
 router.get('/:id',verifyToken, getProducto);
-router.post('/',verifyToken, isAdmin, createProducto);
-router.put('/:id',verifyToken, actualizarProducto);
-router.delete('/:id',verifyToken, eliminarProducto);
+router.post('/',verifyToken, isModerador || isAdmin, createProducto);
+router.put('/:id',verifyToken,isModerador || isAdmin, actualizarProducto);
+router.delete('/:id',verifyToken,isAdmin, eliminarProducto);
 
 module.exports = router;  
