@@ -3,6 +3,9 @@ const app = express();
 const cors = require('cors');
 const PORT = 3000;
 
+require("dotenv").config();
+
+
 // Middleware para manejar CORS
 app.use(cors());
 
